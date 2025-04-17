@@ -1,5 +1,8 @@
 "use strict";
 
+document.getElementById("form__triangle-calc").addEventListener("submit", function (event) {return calculateTriangle(event);});
+document.getElementById("form__clear-button").addEventListener("click", function (event) {return calculateTriangle(event);});
+
 function checkTriangle(sideId) {
   let sideTriangle = document.getElementById(sideId).value;
   if (sideTriangle === "") {
@@ -18,27 +21,30 @@ function checkTriangle(sideId) {
   }
   return sideTriangle;
 }
+
 function calculateTriangle(event) {
   event.preventDefault();
+
   let aTriangle = checkTriangle("aTriangle");
   let bTriangle = checkTriangle("bTriangle");
   let cTriangle = checkTriangle("cTriangle");
+
   if (aTriangle < bTriangle + cTriangle && bTriangle < aTriangle + cTriangle && cTriangle < aTriangle + bTriangle) {
     if (aTriangle ** 2 === bTriangle ** 2 + cTriangle ** 2 || bTriangle ** 2 === cTriangle ** 2 + aTriangle ** 2 || cTriangle ** 2 === bTriangle ** 2 + aTriangle ** 2) {
       if (aTriangle ** 2 === bTriangle ** 2 + cTriangle ** 2) {
-        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гігпотенузою " + aTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гіпотенузою " + aTriangle + " см";
       } else if (bTriangle ** 2 === cTriangle ** 2 + aTriangle ** 2) {
-        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гігпотенузою " + bTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гіпотенузою " + bTriangle + " см";
       } else {
-        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гігпотенузою " + cTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник прямокутний з гіпотенузою " + cTriangle + " см";
       }
     } else if (aTriangle === bTriangle && aTriangle !== cTriangle || bTriangle === cTriangle && bTriangle !== aTriangle || cTriangle === aTriangle && cTriangle !== bTriangle) {
       if (aTriangle === bTriangle && aTriangle !== cTriangle) {
-        document.getElementById("resultTriangle").textContent = "Ваш стрикутник рівнобедрений з основою " + cTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник рівнобедрений з основою " + cTriangle + " см";
       } else if (bTriangle === cTriangle && bTriangle !== aTriangle) {
-        document.getElementById("resultTriangle").textContent = "Ваш стрикутник рівнобедрений з основою " + aTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник рівнобедрений з основою " + aTriangle + " см";
       } else {
-        document.getElementById("resultTriangle").textContent = "Ваш стрикутник рівнобедрений з основою " + bTriangle + " см";
+        document.getElementById("resultTriangle").textContent = "Ваш трикутник рівнобедрений з основою " + bTriangle + " см";
       }
     } else if (aTriangle === bTriangle && aTriangle === cTriangle) {
       document.getElementById("resultTriangle").textContent = "Ваш трикутник рівносторонній!";

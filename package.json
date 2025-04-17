@@ -1,0 +1,31 @@
+{
+  "name": "calculator-triangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-change-theme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artistnepon/Calculator-Triangle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Artistnepon/Calculator-Triangle/issues"
+  },
+  "homepage": "https://github.com/Artistnepon/Calculator-Triangle#readme",
+  "dependencies": {
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0"
+  }
+}
