@@ -1,0 +1,68 @@
+body
+  font-family: Arial, sans-serif
+  background-color: #f4f4f4
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100%
+  transition: background-color 0.5s, color 0.5s
+
+form
+  background-color: white
+  padding: 20px
+  border-radius: 8px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  width: 300px
+  text-align: center
+  transition: background 0.5s, box-shadow 0.5s
+
+  h1
+    font-size: 20px
+    margin-bottom: 10px
+    transition: color 0.5s
+
+  .form__text-input
+    width: calc(100% - 22px)
+    padding: 10px
+    margin: 10px 0
+    border: 1px solid #ccc
+    border-radius: 4px
+    transition: background-color 0.5s, border 0.5s, color 0.5s
+
+    &::placeholder
+      font-weight: 500
+
+  input[type="submit"], button
+    padding: 10px 20px
+    margin: 10px 5px
+    border-radius: 4px
+    background-color: #007BFF
+    color: white
+    cursor: pointer
+    border: solid 1px #007BFF
+    transition: background-color 0.5s, border 0.5s, color 0.5s
+
+    &:hover
+      background-color: #0056b3
+
+  button
+    &:nth-of-type(1)
+      background-color: #dc3545
+      border: solid 1px #dc3545
+
+      &:hover
+        background-color: #c82333
+
+    &:nth-of-type(2)
+      background-color: #28a745
+      border: solid 1px #28a745
+
+      &:hover
+        background-color: #2d9120
+        border: solid 1px #2d9120
+
+  p
+    margin-top: 20px
+    font-size: 16px
+    transition: color 0.5s
