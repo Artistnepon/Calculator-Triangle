@@ -1,31 +1,37 @@
 {
-  "name": "calculator-triangle",
+  "name": "webpack-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "script-change-theme.js",
+  "description": "Webpack boilerplate with SCSS and JavaScript",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Artistnepon/Calculator-Triangle.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Artistnepon/Calculator-Triangle/issues"
-  },
-  "homepage": "https://github.com/Artistnepon/Calculator-Triangle#readme",
-  "dependencies": {
-    "webpack": "^5.99.5",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "build": "webpack --config webpack.config.js",
+    "lint": "npx eslint ./src/js/",
+    "check": "node -v && npm -v && webpack -v",
+    "validate": "node ./html-validator.js",
+    "babel": "npx babel ./src/js/ --out-dir ./src/babel/",
+    "start": "npx webpack serve"
   },
   "devDependencies": {
-    "@eslint/js": "^9.24.0",
-    "eslint": "^9.24.0",
-    "globals": "^16.0.0"
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.3",
+    "@eslint/js": "^9.25.1",
+    "autoprefixer": "^10.4.17",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.2.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "html-validator": "^6.0.1",
+    "reset-css": "^5.0.2"
   }
 }
